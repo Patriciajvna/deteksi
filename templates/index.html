@@ -76,7 +76,7 @@
             const tensor = tf.browser.fromPixels(img).toFloat().div(tf.scalar(255)).expandDims();
 
             // Ganti 'path/to/your/model.h5' dengan path model h5 yang sesuai
-            const model = await tf.loadLayersModel('path/to/your/model.h5/model.json');
+            const model = await tf.loadLayersModel('static/trained_model2.h5');
 
             // Gunakan model untuk prediksi
             const predictions = model.predict(tensor).arraySync();
